@@ -52,17 +52,19 @@ console.log('跳转到个人主页');
 
 const autoLike = async (page: Page) => {
     try {
+        await sleep(10000);
         await page.screenshot({
             path: 'page.png'
         })
         console.log('准备点赞');
-        await page.waitForSelector('a[class="item qz_like_btn_v3 "]');
         const likeBtns = await page.$$('a[class="item qz_like_btn_v3 "]');
         console.log('需要点赞的数量', likeBtns.length);
         for (let i = 0; i < likeBtns.length; i ++) {
             await sleep(1000);
             likeBtns[i].click();
         }
+    } catch (e) {
+        console.log('超时');
     } finally {
         setTimeout(async () => {
             await page.reload();
