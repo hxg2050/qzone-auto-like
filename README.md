@@ -16,8 +16,14 @@
 本地查看chrome路径，打开浏览器输入`chrome://version`  
 ![帮助文件](1.png "Magic Gardens")
 
+
+linux上需要单独安装`chromeium-browser`, 我用的是ubuntu, 其他系统用自己的包管理器安装即可
+```
+sudo apt install chromeium-browser
+```
+
 `
-注意linux上运行需要安装中文字体
+注意linux运行上截图方框是需要安装中文字体
 `
 
 ## 配置
