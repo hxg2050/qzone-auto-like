@@ -14,7 +14,7 @@
 1、克隆本程序到本地，运行`bun install`安装依赖  
 2、配置chrome运行目录  
 本地查看chrome路径，打开浏览器输入`chrome://version`  
-![帮助文件](/1.png "Magic Gardens")
+![帮助文件](1.png "Magic Gardens")
 
 `
 注意linux上运行需要安装中文字体
