@@ -52,6 +52,8 @@ console.log('跳转到个人主页');
 
 const autoLike = async (page: Page) => {
     try {
+        await sleep(1000);
+        await page.reload();
         await sleep(10000);
         await page.screenshot({
             path: 'page.png'
@@ -66,8 +68,7 @@ const autoLike = async (page: Page) => {
     } catch (e) {
         console.log('超时');
     } finally {
-        setTimeout(async () => {
-            await page.reload();
+        setTimeout(() => {
             autoLike(page)
         }, 60 * 1000);
     }
